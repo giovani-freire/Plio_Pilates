@@ -11,7 +11,7 @@
 
 /* Base */
 body {
-  background: black;
+  background: #0a0a0a;
   color: #ffffff;
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
@@ -124,14 +124,14 @@ nav {
   display: block;
   width: 28px;
   height: 1px;
-  background: #6bcfb0;
+  background: #34bb90;
 }
 
 .hero-eyebrow span {
   font-size: 0.75rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #6bcfb0;
+  color: #34bb90;
   font-weight: 400;
 }
 
@@ -183,7 +183,7 @@ nav {
 
 .btn-primary:hover {
   background: #ffffff;
-  color: black;
+  color: #0a0a0a;
 }
 
 .btn-secondary {
@@ -215,7 +215,7 @@ nav {
   gap: 2.5rem;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid black;
+  border-top: 1px solid #1a1a1a;
 }
 
 .stat {
@@ -244,7 +244,7 @@ nav {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #6bcfb0;
+  background: #34bb90;
   margin-right: 4px;
   vertical-align: middle;
 }
@@ -256,6 +256,7 @@ nav {
   align-items: flex-end;
   justify-content: flex-end;
   padding: 5rem 0 3rem;
+  min-width: 0;
 }
 
 .photo-card {
@@ -263,17 +264,18 @@ nav {
   border-radius: 120px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 1;
 }
 
 .photo-card:nth-child(1) {
-  width: 280px;
-  height: 480px;
-  margin-bottom: 70px;
+  width: clamp(160px, 18vw, 280px);
+  height: clamp(280px, 32vw, 480px);
+  margin-bottom: clamp(40px, 5vw, 70px);
 }
 
 .photo-card:nth-child(2) {
-  width: 265px;
-  height: 455px;
+  width: clamp(150px, 17vw, 265px);
+  height: clamp(260px, 30vw, 455px);
 }
 
 .photo-img {
@@ -288,7 +290,7 @@ nav {
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background: black;
+  background: rgba(10, 10, 10, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
   padding: 0.35rem 1rem;
@@ -330,7 +332,7 @@ nav {
   }
 
   .nav-links {
-    display: none; /* substituir por menu hambúrguer em mobile */
+    display: none;
   }
 
   .hero {
@@ -346,17 +348,17 @@ nav {
 
   .hero-right {
     justify-content: center;
-    padding: 0;
+    padding: 0 0 2rem;
   }
 
   .photo-card:nth-child(1) {
-    width: 160px;
-    height: 280px;
-    margin-bottom: 40px;
+    width: clamp(120px, 38vw, 200px);
+    height: clamp(220px, 65vw, 340px);
+    margin-bottom: clamp(30px, 6vw, 50px);
   }
 
   .photo-card:nth-child(2) {
-    width: 150px;
-    height: 260px;
+    width: clamp(110px, 35vw, 190px);
+    height: clamp(200px, 60vw, 320px);
   }
 }
