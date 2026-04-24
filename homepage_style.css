@@ -1,0 +1,362 @@
+/* ===========================
+   Pulse Pilates — homepage_style.css
+   =========================== */
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  background: black;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   Navegação
+   =========================== */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3.5rem;
+  z-index: 10;
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-brand h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.nav-brand span {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #b0b0b0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  align-items: center;
+  padding: 0 3.5rem;
+  gap: 4rem;
+}
+
+/* Coluna esquerda */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 5rem;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #6bcfb0;
+}
+
+.hero-eyebrow span {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6bcfb0;
+  font-weight: 400;
+}
+
+.hero-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(3.5rem, 5.5vw, 5rem);
+  line-height: 1.08;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.hero-heading em {
+  font-style: italic;
+  color: #d8d4cc;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: #aaaaaa;
+  line-height: 1.8;
+  max-width: 380px;
+  letter-spacing: 0.01em;
+}
+
+/* Botões */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  color: black;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.btn-secondary::after {
+  content: '→';
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+}
+
+/* Stats */
+.stat-row {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid black;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.stat-desc {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+}
+
+.teal-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6bcfb0;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* Coluna direita — fotos */
+.hero-right {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 5rem 0 3rem;
+}
+
+.photo-card {
+  position: relative;
+  border-radius: 120px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.photo-card:nth-child(1) {
+  width: 280px;
+  height: 480px;
+  margin-bottom: 70px;
+}
+
+.photo-card:nth-child(2) {
+  width: 265px;
+  height: 455px;
+}
+
+.photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tag {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cccccc;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+}
+
+/* ===========================
+   Animações de entrada
+   =========================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-eyebrow { animation: fadeUp 0.7s ease forwards; }
+.hero-heading  { animation: fadeUp 0.7s 0.12s ease both; }
+.hero-sub      { animation: fadeUp 0.7s 0.22s ease both; }
+.hero-actions  { animation: fadeUp 0.7s 0.32s ease both; }
+.stat-row      { animation: fadeUp 0.7s 0.42s ease both; }
+.hero-right    { animation: fadeUp 0.8s 0.20s ease both; }
+
+/* ===========================
+   Responsivo
+   =========================== */
+@media (max-width: 900px) {
+  nav {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none; /* substituir por menu hambúrguer em mobile */
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 6rem 1.5rem 3rem;
+    gap: 3rem;
+    min-height: auto;
+  }
+
+  .hero-left {
+    padding-top: 0;
+  }
+
+  .hero-right {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .photo-card:nth-child(1) {
+    width: 160px;
+    height: 280px;
+    margin-bottom: 40px;
+  }
+
+  .photo-card:nth-child(2) {
+    width: 150px;
+    height: 260px;
+  }
+}
