@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Pulse Pilates</title>
+  <link rel="shortcut icon" href="source/company_icon.svg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contato_style.css">
+</head>
+
+<body>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <img src="source/company_logo.png" alt="Logo Pulse Pilates" class="nav-logo">
+      <div class="nav-brand-text">
+        <h1>Pulse Pilates</h1>
+        <span>Pilates e treinamento funcional</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="modalidades.html">Modalidades</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="contato.html" class="active">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="hero-inner">
+      <span class="eyebrow"><span class="eyebrow-line"></span>Fale conosco</span>
+      <h2 class="page-title">Estamos prontos<br><em>para te receber.</em></h2>
+    </div>
+  </section>
+
+  <!-- Conteúdo principal -->
+  <main class="main-grid">
+
+    <!-- Dados de contato -->
+    <div class="contact-blocks">
+
+      <div class="contact-block">
+        <span class="block-label">Telefone & WhatsApp</span>
+        <a href="tel:+5511999999999" class="block-value">(11) 99999-9999</a>
+        <p class="block-note">Seg–Sex das 7h às 20h &nbsp;·&nbsp; Sáb das 8h às 13h</p>
+      </div>
+
+      <div class="block-rule"></div>
+
+      <div class="contact-block">
+        <span class="block-label">E-mail</span>
+        <a href="mailto:contato@pulsepilates.com.br" class="block-value">contato@pulsepilates.com.br</a>
+        <p class="block-note">Respondemos em até 24 horas úteis</p>
+      </div>
+
+      <div class="block-rule"></div>
+
+      <div class="contact-block">
+        <span class="block-label">Unidade Pinheiros</span>
+        <span class="block-value static">Rua Cardeal Arcoverde, 1234</span>
+        <p class="block-note">São Paulo — SP &nbsp;·&nbsp; Seg–Sex: 6h–21h &nbsp;·&nbsp; Sáb: 8h–14h</p>
+      </div>
+
+      <div class="block-rule"></div>
+
+      <div class="contact-block">
+        <span class="block-label">Unidade Itaim Bibi</span>
+        <span class="block-value static">Av. Brigadeiro Faria Lima, 4200</span>
+        <p class="block-note">São Paulo — SP &nbsp;·&nbsp; Seg–Sex: 6h30–21h &nbsp;·&nbsp; Sáb: 8h–13h</p>
+      </div>
+
+      <div class="block-rule"></div>
+
+      <div class="contact-block">
+        <span class="block-label">Redes Sociais</span>
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <span class="social-sep">·</span>
+          <a href="#" class="social-link">Facebook</a>
+          <span class="social-sep">·</span>
+          <a href="#" class="social-link">YouTube</a>
+        </div>
+        <p class="block-note">@pulsepilates</p>
+      </div>
+
+    </div>
+
+    <!-- Divisor vertical -->
+    <div class="vertical-rule"></div>
+
+    <!-- Formulário de agendamento -->
+    <div class="form-block">
+      <div class="form-header">
+        <span class="eyebrow"><span class="eyebrow-line"></span>Agende uma aula</span>
+        <p class="form-intro">Preencha os campos abaixo e entraremos em contato para confirmar seu horário.</p>
+      </div>
+
+      <div class="form-fields">
+        <div class="field-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com">
+          </div>
+          <div class="field-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" placeholder="(11) 99999-9999">
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="unidade">Unidade preferida</label>
+          <select id="unidade">
+            <option value="" disabled selected>Selecione uma unidade</option>
+            <option value="pinheiros">Pinheiros</option>
+            <option value="itaim">Itaim Bibi</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label for="mensagem">Mensagem <span class="optional">(opcional)</span></label>
+          <textarea id="mensagem" rows="4" placeholder="Objetivos, dúvidas, disponibilidade de horário..."></textarea>
+        </div>
+        <button class="btn-submit" type="button">Enviar solicitação</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-brand">
+        <img src="source/company_logo.png" alt="Logo Pulse Pilates" class="footer-logo">
+        <span>Pulse Pilates</span>
+      </a>
+      <p class="footer-copy">© 2024 Pulse Pilates. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,619 @@
+/* ===========================
+   Pulse Pilates — planos_style.css
+   =========================== */
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  background: #111314;
+  color: #d8d4cc;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ===========================
+   Navegação
+   =========================== */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3.5rem;
+  background: #111314;
+  border-bottom: 1px solid #1e2022;
+  z-index: 100;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nav-brand h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.nav-brand span {
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: 200;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-links a.active {
+  border-bottom: 1px solid #34bb90;
+  padding-bottom: 2px;
+}
+
+/* ===========================
+   Utilitários
+   =========================== */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #34bb90;
+  font-weight: 400;
+}
+
+.eyebrow-line {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #34bb90;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Hero
+   =========================== */
+.page-hero {
+  padding: 5rem 3.5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 640px;
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.page-title em {
+  font-style: italic;
+  color: #34bb90;
+}
+
+.page-intro {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* ===========================
+   Toggle
+   =========================== */
+.section-plans {
+  padding: 0 3.5rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plans-toggle {
+  display: inline-flex;
+  border: 1px solid #2a2d30;
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 3rem;
+}
+
+.toggle-btn {
+  padding: 0.55rem 1.75rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #999;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.toggle-btn.active {
+  background: #34bb90;
+  color: #0a0a0a;
+}
+
+.toggle-btn:not(.active):hover {
+  color: #ffffff;
+}
+
+/* ===========================
+   Cards de planos
+   =========================== */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.plans-grid.hidden {
+  display: none;
+}
+
+.plan-card {
+  background: #181b1e;
+  border: 1px solid #222628;
+  border-radius: 2px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.plan-card:hover {
+  border-color: #34bb90;
+}
+
+/* Destaque — semestral */
+.plan-featured {
+  background: #1a2220;
+  border-color: #34bb90;
+  transform: translateY(-12px);
+}
+
+/* Premium — anual */
+.plan-premium {
+  background: #181b1e;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #34bb90;
+  color: #0a0a0a;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 0 0 999px 999px;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.badge-gold {
+  background: #c9a84c;
+  color: #0a0a0a;
+}
+
+.plan-period {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.plan-price {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.2rem;
+  line-height: 1;
+}
+
+.price-currency {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.6rem;
+  font-weight: 300;
+}
+
+.price-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.price-period {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: auto;
+  padding-bottom: 0.4rem;
+  align-self: flex-end;
+}
+
+.plan-billing {
+  font-size: 0.75rem;
+  color: #ccc;
+  letter-spacing: 0.04em;
+  margin-top: -0.75rem;
+}
+
+/* Features */
+.plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #222628;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.check {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #34bb90;
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+}
+
+.check::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 5px;
+  height: 3px;
+  border-left: 1.5px solid #0a0a0a;
+  border-bottom: 1.5px solid #0a0a0a;
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.check-off {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #2a2d30;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.plan-card .plan-features li:has(.check-off) {
+  color: #555;
+}
+
+/* Botão do plano */
+.plan-btn {
+  display: block;
+  text-align: center;
+  padding: 0.85rem;
+  border: 1px solid #2a2d30;
+  color: #ccc;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+  margin-top: auto;
+}
+
+.plan-btn:hover {
+  border-color: #34bb90;
+  color: #34bb90;
+}
+
+.plan-featured .plan-btn {
+  border-color: #34bb90;
+  color: #34bb90;
+}
+
+.plan-featured .plan-btn:hover {
+  background: #34bb90;
+  color: #0a0a0a;
+}
+
+/* ===========================
+   Seção parceiros
+   =========================== */
+.section-partners {
+  background: #0d0f10;
+  border-top: 1px solid #1e2022;
+  padding: 5rem 0;
+}
+
+.partners-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.partners-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 560px;
+}
+
+.partners-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.partners-intro {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.partner-card {
+  background: #181b1e;
+  border: 1px solid #222628;
+  border-radius: 2px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  transition: border-color 0.3s;
+}
+
+.partner-card:hover {
+  border-color: #34bb90;
+}
+
+.partner-logo-area {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.partner-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.partner-formerly {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.partner-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #222628;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rule-block {
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rule-divider {
+  height: 1px;
+  background: #222628;
+}
+
+.rule-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.rule-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #34bb90;
+  text-align: right;
+}
+
+.partner-note {
+  font-size: 0.8rem;
+  color: #ccc;
+  line-height: 1.7;
+  border-top: 1px solid #1e2022;
+  padding-top: 1.25rem;
+}
+
+.partners-disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.8;
+  border-top: 1px solid #1a1d1f;
+  padding-top: 2rem;
+  max-width: 700px;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  background: #0d0f10;
+  border-top: 1px solid #1a1d1f;
+  padding: 2.5rem 3.5rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.4;
+}
+
+.footer-brand span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ccc;
+  letter-spacing: 0.04em;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: #666;
+}
+
+/* ===========================
+   Animações
+   =========================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-hero       { animation: fadeUp 0.7s ease both; }
+.section-plans   { animation: fadeUp 0.7s 0.1s ease both; }
+.section-partners { animation: fadeUp 0.7s 0.2s ease both; }
+
+/* ===========================
+   Responsivo
+   =========================== */
+@media (max-width: 1024px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .plan-featured {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 1.25rem 1.5rem; }
+  .nav-links { display: none; }
+
+  .page-hero { padding: 3.5rem 1.5rem 2.5rem; }
+
+  .section-plans { padding: 0 1.5rem 4rem; }
+
+  .partners-inner { padding: 0 1.5rem; }
+
+  .partners-grid { grid-template-columns: 1fr; }
+
+  .rule-block { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+  .rule-value { text-align: left; }
+
+  footer { padding: 2.5rem 1.5rem; }
+  .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+}
