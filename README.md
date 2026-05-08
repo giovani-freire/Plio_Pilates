@@ -9,10 +9,29 @@ Sistema web institucional para uma clínica de pilates e treinamento funcional, 
 
 ## Preview
 
+## Home
+
 ![Home](assets/preview/home.png)
 
+## Sobre
+
+![Sobre](assets/preview/sobre.png)
+
+## Modalidades
+
+![Modalidades](assets/preview/modalidades.png)
+
+## Planos
+
+![Planos](assets/preview/planos.png)
+
+## Contato
+
 ![Contato](assets/preview/contato.png)
----
+
+## Confirmação de agendamento
+
+![Modal](assets/preview/modal.png)
 
 # Funcionalidades
 
