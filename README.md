@@ -7,7 +7,7 @@
 
 Sistema web institucional para uma clínica de pilates e treinamento funcional, desenvolvido com foco em experiência do usuário, design moderno e integração com banco de dados em nuvem.
 
-## Preview
+# Preview
 
 ## Home
 
