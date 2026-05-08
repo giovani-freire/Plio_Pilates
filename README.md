@@ -72,7 +72,7 @@ Sistema web institucional para uma clínica de pilates e treinamento funcional, 
 # Estrutura do projeto
 
 ```txt
-Pulse_Pilates/
+Plio_Pilates/
 │
 ├── assets/
 │   ├── css/
