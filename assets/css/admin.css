@@ -1,0 +1,958 @@
+/* ===========================
+   Reset
+=========================== */
+
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   Base
+=========================== */
+
+body {
+
+  background:
+    #f7f7f5;
+
+  color:
+    #1a1a1a;
+
+  font-family:
+    'Segoe UI', sans-serif;
+
+  font-size:
+    17px;
+
+  font-weight:
+    400;
+
+  padding:
+    3rem;
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.admin-container {
+
+  max-width:
+    1600px;
+
+  margin:
+    0 auto;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.admin-header {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    1rem;
+
+  margin-bottom:
+    2.5rem;
+
+  padding-bottom:
+    1.5rem;
+
+  border-bottom:
+    1px solid #e8e8e8;
+}
+
+.admin-header h1 {
+
+  font-size:
+    3rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    -0.03em;
+
+  color:
+    #1a1a1a;
+}
+
+/* ===========================
+   Header Tools
+=========================== */
+
+.admin-tools {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    1rem;
+}
+
+.admin-tools select {
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #e8e8e8;
+
+  border-radius:
+    14px;
+
+  padding:
+    0.85rem 1rem;
+
+  width:
+    150px;
+
+  font-family:
+    'Segoe UI', sans-serif;
+
+  font-size:
+    0.92rem;
+
+  font-weight:
+    600;
+
+  color:
+    #444;
+
+  text-align:
+    center;
+
+  text-align-last:
+    center;
+
+  outline:
+    none;
+
+  cursor:
+    pointer;
+
+  transition:
+    all 0.25s ease;
+
+  appearance:
+    none;
+}
+
+.admin-tools select option {
+
+  text-align:
+    center;
+}
+
+.admin-tools select:hover {
+
+  border-color:
+    #34bb90;
+}
+
+.admin-tools select:focus {
+
+  border-color:
+    #34bb90;
+
+  box-shadow:
+    0 0 0 4px rgba(52, 187, 144, 0.10);
+}
+
+.admin-header button {
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #dcdcdc;
+
+  border-radius:
+    999px;
+
+  padding:
+    1rem 1.5rem;
+
+  font-size:
+    0.92rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+
+  color:
+    #555;
+
+  cursor:
+    pointer;
+
+  transition:
+    all 0.25s ease;
+}
+
+.admin-header button:hover {
+
+  border-color:
+    #34bb90;
+
+  color:
+    #34bb90;
+
+  transform:
+    translateY(-1px);
+}
+
+/* ===========================
+   Metrics
+=========================== */
+
+/* ===========================
+   Metrics
+=========================== */
+
+.metrics {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    0.7rem;
+
+  margin-bottom:
+    1.4rem;
+}
+
+.metric-card {
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #ececec;
+
+  border-radius:
+    16px;
+
+  padding:
+    0.85rem 1rem;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    0.2rem;
+
+  transition:
+    all 0.25s ease;
+}
+
+.metric-card:hover {
+
+  border-color:
+    #34bb90;
+
+  transform:
+    translateY(-2px);
+}
+
+.metric-card span {
+
+  font-size:
+    0.62rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+
+  color:
+    #888;
+}
+
+.metric-card h2 {
+
+  font-size:
+    1.35rem;
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  color:
+    #1a1a1a;
+}
+
+.metric-card {
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #ececec;
+
+  border-radius:
+    18px;
+
+  padding:
+    1rem 1.2rem;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    0.35rem;
+
+  transition:
+    all 0.25s ease;
+}
+
+.metric-card:hover {
+
+  border-color:
+    #34bb90;
+
+  transform:
+    translateY(-2px);
+}
+
+.metric-card span {
+
+  font-size:
+    0.7rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+
+  color:
+    #888;
+}
+
+.metric-card h2 {
+
+  font-size:
+    1.7rem;
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  color:
+    #1a1a1a;
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+#agendamentos {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap:
+    1.3rem;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card {
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #ececec;
+
+  border-radius:
+    22px;
+
+  padding:
+    1.6rem;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    0.9rem;
+
+  animation:
+    fadeUp 0.5s ease both;
+
+  transition:
+    all 0.3s ease;
+}
+
+.card:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    #34bb90;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* ===========================
+   Card Title
+=========================== */
+
+.card h3 {
+
+  font-size:
+    1.55rem;
+
+  font-weight:
+    700;
+
+  line-height:
+    1.2;
+
+  color:
+    #1a1a1a;
+}
+
+/* ===========================
+   Card Info
+=========================== */
+
+.card p {
+
+  font-size:
+    0.94rem;
+
+  line-height:
+    1.7;
+
+  font-weight:
+    400;
+
+  color:
+    #555;
+}
+
+.card strong {
+
+  font-weight:
+    600;
+
+  color:
+    #1a1a1a;
+}
+
+/* ===========================
+   Status
+=========================== */
+
+.status {
+
+  width:
+    fit-content;
+
+  padding:
+    0.55rem 1rem;
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.74rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+.status.aberto {
+
+  background:
+    #fff5d9;
+
+  color:
+    #b78103;
+}
+
+.status.aceito {
+
+  background:
+    #ddf5ea;
+
+  color:
+    #1f7a57;
+}
+
+.status.negado {
+
+  background:
+    #ffe3e3;
+
+  color:
+    #b42318;
+}
+
+/* ===========================
+   Card Actions
+=========================== */
+
+.card-actions {
+
+  display:
+    flex;
+
+  gap:
+    0.7rem;
+
+  margin-top:
+    0.4rem;
+}
+
+.btn {
+
+  flex:
+    1;
+
+  border:
+    none;
+
+  border-radius:
+    14px;
+
+  padding:
+    0.82rem;
+
+  font-size:
+    0.8rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  cursor:
+    pointer;
+
+  transition:
+    all 0.25s ease;
+}
+
+.btn:hover {
+
+  transform:
+    translateY(-1px);
+}
+
+.btn-accept {
+
+  background:
+    #34bb90;
+
+  color:
+    #ffffff;
+}
+
+.btn-accept:hover {
+
+  background:
+    #28a47c;
+}
+
+.btn-deny {
+
+  background:
+    #f5f5f5;
+
+  border:
+    1px solid #e8e8e8;
+
+  color:
+    #666;
+}
+
+.btn-deny:hover {
+
+  border-color:
+    #d7d7d7;
+
+  color:
+    #333;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(12px);
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1200px) {
+
+  #agendamentos {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .metrics {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+
+  #agendamentos {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+
+    padding:
+      1.5rem;
+  }
+
+  .admin-header {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+  }
+
+  .admin-tools {
+
+    width:
+      100%;
+
+    justify-content:
+      space-between;
+  }
+
+  .admin-header h1 {
+
+    font-size:
+      2.3rem;
+  }
+
+
+
+  #agendamentos {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .card {
+
+    padding:
+      1.4rem;
+  }
+}
+
+
+/* ===========================
+   Dashboard Top
+=========================== */
+
+.dashboard-top {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 240px;
+
+  gap:
+    1rem;
+
+  margin-bottom:
+    1.5rem;
+}
+
+/* ===========================
+   Chart
+=========================== */
+
+.chart-card {
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #ececec;
+
+  border-radius:
+    20px;
+
+  padding:
+    1.2rem;
+
+  height:
+    320px;
+}
+
+/* ===========================
+   Metrics
+=========================== */
+
+.metrics {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    0.7rem;
+}
+
+.metric-card {
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #ececec;
+
+  border-radius:
+    16px;
+
+  padding:
+    1rem;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    0.25rem;
+
+  transition:
+    all 0.25s ease;
+}
+
+.metric-card:hover {
+
+  border-color:
+    #34bb90;
+
+  transform:
+    translateY(-2px);
+}
+
+.metric-card span {
+
+  font-size:
+    0.65rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+
+  color:
+    #888;
+}
+
+.metric-card h2 {
+
+  font-size:
+    1.45rem;
+
+  font-weight:
+    700;
+
+  line-height:
+    1;
+
+  color:
+    #1a1a1a;
+}
+
+/* ===========================
+   Date Filter
+=========================== */
+
+#filtroData {
+
+  display:
+    none;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid #e8e8e8;
+
+  border-radius:
+    14px;
+
+  padding:
+    0.82rem 1rem;
+
+  height:
+    48px;
+
+  font-family:
+    'Segoe UI', sans-serif;
+
+  font-size:
+    0.92rem;
+
+  font-weight:
+    600;
+
+  color:
+    #444;
+
+  outline:
+    none;
+
+  transition:
+    all 0.25s ease;
+
+  cursor:
+    pointer;
+}
+
+#filtroData:hover {
+
+  border-color:
+    #34bb90;
+}
+
+#filtroData:focus {
+
+  border-color:
+    #34bb90;
+
+  box-shadow:
+    0 0 0 4px rgba(52, 187, 144, 0.10);
+}
+
+/* Centraliza parcialmente texto da data */
+
+#filtroData::-webkit-datetime-edit {
+
+  text-align:
+    center;
+}
+
+/* Ícone calendário */
+
+#filtroData::-webkit-calendar-picker-indicator {
+
+  cursor:
+    pointer;
+
+  opacity:
+    0.7;
+
+  transition:
+    0.2s;
+}
+
+#filtroData::-webkit-calendar-picker-indicator:hover {
+
+  opacity:
+    1;
+}

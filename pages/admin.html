@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Administrativo</title>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <main class="admin-container">
+
+
+        <div class="admin-header">
+
+            <h1>Solicitações</h1>
+
+            <div class="admin-tools">
+
+                <select id="filtroStatus" onchange="carregarAgendamentos()">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="aberto">
+                        Abertos
+                    </option>
+
+                    <option value="aceito">
+                        Aceitos
+                    </option>
+
+                    <option value="negado">
+                        Negados
+                    </option>
+
+                </select>
+
+                <select id="filtroPeriodo" onchange="carregarAgendamentos()">
+
+                    <option value="sempre">
+                        Sempre
+                    </option>
+
+                    <option value="hoje">
+                        Hoje
+                    </option>
+
+                    <option value="7dias">
+                        Últimos 7 dias
+                    </option>
+
+                    <option value="mes">
+                        Este mês
+                    </option>
+
+                    <option value="data">
+                        Data específica
+                    </option>
+
+                </select>
+
+                <input type="date" id="filtroData" onchange="carregarAgendamentos()">
+
+                <button onclick="logout()">
+                    Sair
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <section class="dashboard-top">
+
+            <div class="chart-card">
+
+                <canvas id="statusChart"></canvas>
+
+            </div>
+
+            <div class="metrics">
+
+                <div class="metric-card">
+
+                    <span>Total</span>
+
+                    <h2 id="totalAgendamentos">0</h2>
+
+                </div>
+
+                <div class="metric-card">
+
+                    <span>Abertos</span>
+
+                    <h2 id="totalAbertos">0</h2>
+
+                </div>
+
+                <div class="metric-card">
+
+                    <span>Aceitos</span>
+
+                    <h2 id="totalAceitos">0</h2>
+
+                </div>
+
+                <div class="metric-card">
+
+                    <span>Negados</span>
+
+                    <h2 id="totalNegados">0</h2>
+
+                </div>
+
+            </div>
+
+        </section>
+        <div id="agendamentos"></div>
+
+    </main>
+
+    <script src="../assets/js/admin.js"></script>
+
+</body>
+
+</html>
